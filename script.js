@@ -12,10 +12,16 @@ const app = createApp({
         ]
     }),
     methods: {
-
+        deleteTask(id) {
+            const newTasks = this.tasks.filter(task => id !== task.id)
+            this.tasks = newTasks;
+        },
+        addTask() {
+            const newTasks = this.tasks.add()
+            this.tasks = newTasks;
+        }
+        
     }
-
-
 })
 
 
